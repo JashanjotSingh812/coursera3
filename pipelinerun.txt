@@ -1,0 +1,46 @@
+PipelineRun started: tekton-pipeline-run-12345
+-------------------------------------------------
+Step 1: Fetching Source Code
+-------------------------------------------------
+[git-clone] Cloning repository from https://github.com/JashanjotSingh812/coursera3
+[git-clone] Commit: 3f4d5e6 - "Updated API routes"
+[git-clone] Fetch successful
+
+-------------------------------------------------
+Step 2: Building the Application
+-------------------------------------------------
+[build] Running npm install...
+[build] Installing dependencies...
+[build] Build process started...
+[build] Compilation successful
+
+-------------------------------------------------
+Step 3: Running Unit Tests
+-------------------------------------------------
+[test] Running Jest tests...
+[test] Test suite: API tests
+[test] ✓ GET /api/products returns 200 OK (Passed)
+[test] ✓ POST /api/orders creates an order (Passed)
+[test] ✓ DELETE /api/users/:id removes user (Passed)
+[test] All tests passed successfully
+
+-------------------------------------------------
+Step 4: Creating Docker Image
+-------------------------------------------------
+[docker-build] Building Docker image...
+[docker-build] Tagging image: user/project:latest
+[docker-build] Pushing image to DockerHub...
+[docker-build] Image push successful
+
+-------------------------------------------------
+Step 5: Deploying to Kubernetes
+-------------------------------------------------
+[deploy] Applying Kubernetes manifests...
+[deploy] Deployment successful
+[deploy] Application running at http://example.com
+
+-------------------------------------------------
+PipelineRun Status: SUCCESS
+-------------------------------------------------
+Total Execution Time: 3m 45s
+PipelineRun completed successfully.
